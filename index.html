@@ -1,12 +1,16 @@
+<!DOCTYPE html>
 <html lang="es">
   <head>
     <meta charset="utf-8" />
-    <title>Adopciones Ls Plata</title>
+    <title>Adopciones La Plata</title>
+    <link href="https://fonts.googleapis.com/css2?family=Concert+One&family=Oxygen:wght@700&family=Source+Sans+Pro:ital@0;1&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="styles.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
   </head>
+
   <body>
+
     <header>
       <div class="switch">
         <div class="flicker"></div>
@@ -15,21 +19,23 @@
     </header>
 
     <section class="main">
-      <div class="main-text">
-        <h1>Adopción de gatitos, La Plata.</h1>
-         <p>text!</p> 
-        <br/>
-        <p>En nuestra galería se encuentran los gatitos actualmente en adopción.</p>
-        <br/>
-        <a href="#footer">contact me ></a>
-      </div>
+              <div class="main__texts">
 
-      <div class="hero-image">
-        <div class="cube" id="react"></div>
-        <div class="cube" id="javascript"></div>
-        <div class="cube" id="html"></div>
-        <div class="cube" id="css"></div>
-      </div>
+                <h1 class="main__titulo">Rescataditos en adopción La Plata</h1>
+
+                <p class="main__about">En nuestra galería se encuentran los gatitos actualmente en adopción.</p>
+                
+              </div>
+
+
+              <div class="libros">
+                <h2 class="texto-libros" >Historias que necesitan un final feliz: </h2>
+                <a href="#popup1" onclick="visualizador(Fotos1, 'Otto')"> <div class="cube" id="gato1"></div></a>
+                <a href="#popup1" onclick="visualizador(Fotos2, 'Fran')"> <div class="cube" id="gato2"></div></a>
+                <a href="#popup1" onclick="visualizador(Fotos3, 'Comino')"> <div class="cube" id="gato3"></div></a>
+                <a href="#popup1" onclick="visualizador(Fotos4, 'Drac y Lagherta')"> <div class="cube" id="gato4"></div></a>
+                <a href="#popup1" onclick="visualizador(Fotos5, 'popup5')"> <div class="cube" id="gato5"></div></a>
+              </div>
 
     </section>
 
@@ -37,92 +43,116 @@
 
 
 
-<!-- **************galeria GATO 1*************** -->
+<!--**********************************galeria GATITOS*********************************  -->
 
 
 
-   
-    <div id="popup" class="overlay">
-        <div id="popupBody">
-            <h2 align="center">Título de la ventana</h2>
-            <a id="cerrar" href="#">&times;</a>
+
+  <div class="popupBody" id="popup1">      <!--***contenedor***  -->      
+               
+            <div>
+                <span  class="botonI"> <img id="botonI" src="images/izquierda.png"> </img>  </span>
+            </div>  
 
 
-
-                <div class="galeria">
-                    <input type="radio" name="navegacion" id="_1" checked>
-                    <input type="radio" name="navegacion" id="_2">
-                    <input type="radio" name="navegacion" id="_3">
-                    <input type="radio" name="navegacion" id="_4"> 
-                    <img src="http://placekitten.com/g/200/300" width="260" height="300" alt="Galeria CSS 1" />
-                    <img src="http://placekitten.com/g/200/300" width="260" height="300" alt="Galeria CSS 2"  />
-                    <img src="http://placekitten.com/260/300" width="260" height="300" alt="Galeria CSS 3" />
-                    <img src="http://placekitten.com/g/200/300" width="260" height="300" alt="Galeria CSS 4" />
-                  </div>
-
-            <div class="popupContent">
-                <p align="center">Este es el contenido</p>
+            <div>   
+                <span  class="botonD"> <img  id="botonD" src="images/derecha.png"> </span>
             </div>
-        </div>
-    </div>
 
 
+            <h2 id="nombre" >Otto</h2>  <!--*** recordar poner el nombre del gatito  ****-->
 
-
-<!-- **************galeria GATO 2*************** -->
-
- 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <section class="sub-section">
-      <div class="square" id="portada1">
-        <h2 class= "nombre-gatitos"> <a href="#popup">Pepito  </a></h2>
-        <p class="info-gatitos">adopción responsable</p>
-        <br/>
-      
-      </div>
-      <div class="square" id="portada2">
-        <h2 class= "nombre-gatitos"><a href="#popup">Naranjito  </a></h2>
-        <p class="info-gatitos">Bebe de 4 meses</p>
-        <br/>
-       
-      </div>
-      <div class="square" id="portada3">
-        <h2 class= "nombre-gatitos"><a href="#popup">Malote  </a></h2>
-        <p class="info-gatitos">Requiere extra de cariño</p>
-        <br/>
+             <a id="cerrar" href="#" onclick="salir()">&times;</a>  <!--***boton cerrar***  -->  
         
-      </div>
-      <div class="square" id="portada4">
-        <h2 class= "nombre-gatitos"><a href="#popup">Copito  </a></h2>
-        <p class="info-gatitos">Bebe muy cariñoso</p>
-        <br/>
-       
-      </div>
-    </section>
+             <p id="contador"> -/- </p>
+            <img class="Diapositiva" id="Diapositiva" src="images/animacion_1.png"> <!--***reproductor de imagenes***  -->  
+                
+            <video class="video" id="video" src="" muted autoplay controls> <!--***reproductor de videos***  -->  
+        
+  </div>
+
+
+
+<!--______________________________Fin de galeria_______________________________________ -->
+
+<div>
+
+  <ul class="gatos-adopcion">
+    <li  onclick="visualizador(Fotos1, 'Otto')">
+
+        <a href="#popup1" >
+          <h2 class= "nombre-gatito">Otto</h2>
+          <img class="contain" src="images/otto/1.jpg">
+          <p class="info-gatito">notas</p>
+        </a>
+    </li>
+
+    <li  onclick="visualizador(Fotos2, 'Fran')">
+        <a href="#popup1">
+          <h2 class= "nombre-gatito">Fran</h2>
+          <img class="contain" src="images/fran/1.jpg">
+          <p class="info-gatito">texto</p>
+        </a>
+    </li>
+
+    <li  onclick="visualizador(Fotos3, 'Comino')">
+        <a href="#popup1">
+          <h2 class= "nombre-gatito">Comino</h2>
+          <img class="contain" src="images/comino/1.jpg">
+          <p class="info-gatito">texto</p>
+        </a>
+    </li>
+
+    <li  onclick="visualizador(Fotos4, 'Draco y Lagherta')">
+      <a href="#popup1">
+        <h2 class= "nombre-gatito">Drac y Lagherta</h2>
+        <img class="contain" src="images/draclag/1.jpg">
+        <p class="info-gatito">texto</p>
+      </a>
+  </li>
+
+
+
+
+
+
+  </ul>
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     <footer id="footer">
-      <p>adopcioneslp@gmail.com</p>
-    </footer>
+      <div id="contactanos">
+         <p>contactanos en:  </p>    
+      </div>
+
+      <div id="insta">
+        <div class="logo">
+          <a href="https://www.instagram.com/adopcionesgatitoslp/" > <img class="paw" src="images/paw.png"/> </a>
+            <img class="instalogo" src="images/instalogo.png"/> 
+        </div> 
+          <a class="link__insta" href="https://www.instagram.com/adopcionesgatitoslp/" > <img class="paw2" src="images/paw.png"/> <p>Instagram</p></a>
+          
+      </div>
+  </footer>
+
+    
 
     <script src="scripts.js"></script>
   </body>

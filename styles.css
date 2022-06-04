@@ -5,47 +5,41 @@ body {
   margin: 0;
   padding: 0;
   background-color: rgb(244, 241, 241);
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Concert One', cursive;
+  /*font-family: 'Source Sans Pro', sans-serif;*/
   color:rgb(57, 57, 57);
+  background: url("images/patitas.png");
 }
 
-h1 {
-  font-size: 70px;
-  line-height: 70px;
-  font-weight: 300;
-  margin: 10px 0;
-}
 
-h2 {
-  font-size: 40px;
-  line-height: 40px;
-  font-weight: 300;
-  margin: 50px 0 10px 0;
-}
-
-p {
-  margin: 0px;
-  font-size: 20px;
-}
-/*
-a {
-  color:rgb(162, 0, 255);
-  font-size: 20px;
-  text-decoration: none;
-  font-weight: 100;
-}
+img {
+  max-width: 100%;
+} 
 
 .dark a {
   color:rgb(246, 169, 241);
 }
-*/
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+/*******************boton dark mode****************************/
 
 header {
   display: flex;
   justify-content: flex-end;
   padding: 30px;
+  background-color: rgba(141, 2, 255, 0.3)
 }
 
 .switch {
@@ -93,266 +87,62 @@ header {
  color:rgb(255, 255, 255);
 }
 
+/****************************************************/
+
+
+
+
 .main {
-  height: 80vh;
+  
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  padding: 30px;
+  padding: 2rem 0;
 }
 
-.main-text {
-  padding: 30px;
-  margin-bottom: 100px;
-}
-
-.nombre-gatitos {
-  color: rgb(1, 37, 83);
-  background-color: rgb(152, 185, 247, 0.5);
-
-}
-.info-gatitos {
-  color: rgb(1, 37, 83);
-  background-color: rgb(152, 185, 247, 0.5);
-
-}
-
-
-
-/****************pop up****************/
-
-
-.overlay {
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background: rgba(0, 0, 0, 0.7);
-  transition: opacity 500ms;
-  visibility: hidden;
-  opacity: 0;
-}
-
-.visible{
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background: rgba(0, 0, 0, 0.7);
-  transition: opacity 500ms;
-  visibility: visible;
-  opacity: 1;
-
-}
-
-
-.overlay:target {
-  visibility: visible;
-  opacity: 1;
-}
-
-
-
-
-#popupBody{
-  width: 46%;
-  padding: 2%;
-  border-radius: 15px;
-  box-shadow: 0 0 5px #CCC;
-  background: rgb(68, 67, 67);
-  position: relative;
-  transition: all 5s ease-in-out;
-  margin: 20% auto;    
-}
-#cerrar{
-  position: absolute;
-  top: 20px;
-  right: 30px;
-  transition: all 200ms;
-  font-size: 30px;
-  font-weight: bold;
-  text-decoration: none;
-  color: #F00;
-}
-
-
-
-
-
-
-/**************galeria*****************/
-
-
-
-
-
-.galeria {
-  height: calc( 300px + 3em);
-  width: 260px;
-  margin:1em auto;
-  border: 1px solid #555;
-  position: relative;  
-  background: rgba(136, 134, 134, 0.7);
-}
-
-.galeria img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  opacity: 0;
-  transition: opacity 3s;
-}
-
-.galeria input[type=radio] {
-  position: relative;
-  bottom: calc(-300px - 1.5em);
-  left: .5em;
-}
-
-.galeria input[type=radio]:nth-of-type(1):checked ~ img:nth-of-type(1) {
-  opacity: 1;
-}
-
-.galeria input[type=radio]:nth-of-type(2):checked ~ img:nth-of-type(2) {
-  opacity: 1;
-}
-
-.galeria input[type=radio]:nth-of-type(3):checked ~ img:nth-of-type(3) {
-  opacity: 1;
-}
-
-.galeria input[type=radio]:nth-of-type(4):checked ~ img:nth-of-type(4) {
-  opacity: 1;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-.square {
-  width: 98%;
-  margin: 1%;
-  height: 350px;
-  background-color: rgb(255, 255, 255);
+.main__titulo {
+  font-family: 'Oxygen', sans-serif;
+  /*font-family: 'Poppins', sans-serif;*/
+  font-size: calc(2rem + 1.5vw);
+  padding: 1rem 0;
+  margin: 0 0 2rem 0;
   text-align: center;
 }
 
-.dark .square {
-  background-color: rgb(71, 71, 71);
+.main__about {
+  font-size: calc(1rem + 0.5vw);
+}
+
+.main__texts {
+  padding: 2rem;
+  margin-bottom: 2rem;
 }
 
 
 
+/**************libros***********/
 
 
-.fade-in {
-  opacity: 100;
-  transition: 0.5s;
+
+.texto-libros {
+  font-size: calc(1.5rem + 0.5vw);
+  color: rgb(1, 37, 83);
+  background-color: rgba(141, 2, 255, 0.3);
+  text-align: center
+}
+.dark .texto-libros{
+  color: #CCC;
 }
 
-.fade-out {
-  opacity: 0;
-  transition: 0.49s;
-}
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-#portada1 {
-  background-image: url("images/cat\ 1.jpg");
-  background-size: cover;
-}
-
-#portada2 {
-  background-image: url("images/cat2.png");
-  background-size: cover;
-}
-
-#portada3 {
-  background-image: url("images/cat\ 2.jpg");
-  background-size: cover;
-}
-
-#portada4 {
-  background-image: url("images/cat\ 3.jpg");
-  background-size: cover;
-}
-
-.sub-section {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.hero-image {
-  position: relative;
+.libros {
   width: 50%;
-  height: 350px;
+  position: relative;
+  height: 20rem;
   display: block;
-  margin-bottom: 100px;
+  margin-bottom: 2rem;
 }
 
 .cube {
@@ -382,84 +172,474 @@ header {
   bottom: -20px;
 }
 
-#html {
-  left: 100px;
-  bottom: 80px;
-  background-image: url("images/cat1.png");
-  background-size: cover;
-  background-color: rgb(175, 119, 227);
-  box-shadow: -60px 60px 20px rgb(50 50 50/ 15%);
-}
 
-#html:before {
-  background-color: rgb(189, 154, 221);
-}
-
-#html:after {
-  background-color: rgb(205, 188, 221);
-}
-
-#css {
-  left: 250px;
-  bottom: 240px;
-  background-image: url("images/cat2m.png");
+#gato1 {
+  left: 20%;
+  bottom: 150px;
+  background-image: url("images/libros/otto.png");
   background-size: cover;
   background-color: rgb(227, 119, 191);
   box-shadow: -100px 100px 20px rgb(50 50 50/ 15%);
 }
 
-#css:before {
+#gato1:before {
   background-color: rgb(221, 154, 207);
 }
 
-#css:after {
+#gato1:after {
   background-color: rgb(221, 188, 211);
 }
 
-#javascript {
-  left: 450px;
-  bottom: 200px;
-  background-image: url("images/cat1.png");
+
+
+#gato2 {
+  left: 70%;
+  bottom:150px;
+  background-image: url("images/libros/fran.png");
   background-size: cover;
   background-color: rgb(119, 227, 186);
   box-shadow: -40px 40px 20px rgb(50 50 50/ 15%);
 }
 
-#javascript:before {
+#gato2:before {
   background-color: rgb(154, 221, 202);
 }
 
-#javascript:after {
+#gato2:after {
   background-color: rgb(188, 221, 212);
 }
 
 
-#react {
-  left: 350px;
-  bottom: 40px;
-  background-image: url("images/cat2m.png");
+
+
+#gato3 {
+  left: 43%;
+  bottom: 19%;
+  background-image: url("images/libros/comi.png");
   background-size: cover;
   background-color: rgb(119, 193, 227);
   box-shadow: -80px 80px 20px rgb(50 50 50/ 15%);
 }
 
-#react:before {
+#gato3:before {
   background-color: rgb(154, 189, 221);
 }
 
-#react:after {
+#gato3:after {
   background-color: rgb(188, 200, 221);
 }
 
-footer {
-    display: flex;
-    justify-content: center;
-    padding: 100px 30px;
-    background-color:rgb(136, 136, 136);
+
+
+#gato4 {
+  left: 20%;
+  bottom: 0px;
+  background-image: url("images/libros/dralag.png");
+  background-size: cover;
+  background-color: rgb(175, 119, 227);
+  box-shadow: -60px 60px 20px rgb(50 50 50/ 15%);
 }
 
+#gato4:before {
+  background-color: rgb(189, 154, 221);
+}
+
+#gato4:after {
+  background-color: rgb(205, 188, 221);
+}
+
+
+
+#gato5 {
+  left:  70%;
+  bottom: 0px;
+  background-image: url("images/ciru/1.jpg");
+  background-size: cover;
+  background-color: rgb(216, 153, 16);
+  box-shadow: -40px 40px 20px rgb(50 50 50/ 15%);
+}
+
+#gato5:before {
+  background-color: rgb(218, 208, 76);
+}
+
+#gato5:after {
+  background-color: rgb(221, 215, 161);
+}
+
+
+
+
+
+
+
+
+
+/****************pop up****************/
+
+
+
+
+.popupBody{      
+  position: fixed;
+  top: 1.5vh;
+  left: 10%;
+  right: 10%;
+  width: 80%;
+  height: 80%;
+  display: flex;  
+  align-items: center; 
+  border-radius: 1vh;
+  border: 1vh solid  rgba(141, 2, 255, 0.5);;
+  box-shadow: 0 0 5px #CCC;
+  /*background: rgb(175, 119, 227,0.5);*/
+  background: url("images/patitas.png");
+   transition: opacity 500ms;
+  visibility: hidden;
+  opacity: 0;
+  z-index: 8;
+}
+
+.visible{  
+  transition: opacity 500ms;
+  visibility: visible;
+  opacity: 1;
+}
+
+
+.popupBody:target {
+  visibility: visible;
+  opacity: 1;
+  
+  
+}
+
+
+#cerrar{
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  transition: all 200ms;
+  font-size: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #F00;
+  z-index: 11;
+}
+  
+
+.popupBody h2{
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 10px;
+  margin: auto;
+  color: rgba(141, 2, 255, 0.5);
+  font-size: 5vh;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+
+
+
+
+/*********************Fin de mi galeria*****************************/
+
+
+
+.botonD {
+  position: absolute;
+  top: 0;
+  right: 15px;
+  z-index:10;
+}  
+  
+  
+.botonI {
+  position: absolute;
+  left: 10px;
+  top: 0;
+  z-index: 10;
+}
+  
+
+#Diapositiva {
+ position: absolute;
+ top: 0;
+ left: 0; 
+ right: 0;
+ bottom: 0;
+ width: 80%;
+ height: 80%;
+ margin: auto;
+ background: rgb(141, 2, 255);
+ object-fit: contain;
+ z-index: 9; 
+}	
+  
+#Diapositiva img{    
+  max-width: 100%;
+  max-height: 100%;
+}
+    
+#video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 80%;
+  height: 80%;
+  margin: auto;
+  background: rgb(141, 2, 255);
+  object-fit: contain;
+  z-index: 7;
+}
+
+#video video{ 
+  max-width: 100%;
+  max-height: 100%;
+  z-index: 7;
+}
+
+
+#contador{
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 60px;
+  margin: auto;
+  width: 6vh;
+  color: rgba(0, 0, 0,1);
+  font-size: 2vh;
+  border-radius: 1.5vh;
+  border: 0.6vh solid  rgba(141, 2, 255, 0.5);;
+  background-color: rgba(250, 250, 250, 0.6);
+  z-index: 11;
+  text-align: center;
+}
+
+
+
+
+
+
+/*************************PORTADAS**************************/
+/*
+
+#portada1 {
+  background-image: url("images/cat\ 1.jpg");
+  background-size: cover;
+}
+
+#portada2 {
+  background-image: url("images/cat2.png");
+  background-size: cover;
+}
+
+#portada3 {
+  background-image: url("images/tofu/1.jpg");
+  background-size: cover;
+}
+
+#portada4 {
+  background-image: url("images/comino/4.jpg");
+  background-size: cover;
+}
+
+
+#portada5 {
+  background-image: url("images/ciru/1.jpg");
+  background-size: cover;
+}
+
+
+#portada6 {
+  background-image: url("images/draclag/1.jpg");
+  background-size: cover;
+}
+
+*/
+
+
+
+/********************cuerpo principal************************/
+
+
+
+.gatos-adopcion{
+  width: 100%;
+  margin: auto;
+  padding: 5vw 0 0 0;
+  text-align: center;
+  display: flex;
+  align-content: space-between;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  flex-direction: row;
+}
+
+
+.gatos-adopcion li{
+  /*position: relative;
+top: 0;
+left: 0;
+  display: inline-block;
+  text-align: center;*/
+  width: 45%;
+   
+  margin: 1.5%;
+  padding: 0.1vw 0.7vh;
+  border: 0.6vh solid  rgba(141, 2, 255, 0.5);
+  border-radius: 10px;
+
+}
+
+
+
+.nombre-gatitos {
+  color: rgb(1, 37, 83);
+  background-color: rgb(152, 185, 247, 0.5);
+
+}
+
+
+.gatos-adopcion h2{
+  font-size: 5vh;
+  font-weight: bold;
+  background: rgba(141, 2, 255, 0.3);
+}
+.info-gatito{
+  
+  top: 750px;
+  font-size: 3vh;
+  color: #CCC;
+  font-weight: bold;
+  background: rgba(141, 2, 255, 0.6);
+}
+
+.gatos-adopcion a{
+  text-decoration: none;
+}
+
+.contain {
+  object-fit: contain; 
+z-index: -1;
+
+}
+
+
+
+/****************************************************/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+footer {
+  display: block;
+    text-align: center;
+    padding: 10px 0 0 0; 
+    background-color:rgba(141, 2, 255, 0.3);
+    margin: 5vw 0 0 0;
+    width: 100%;
+    height: 10vw;
+}
+
+#contactanos{
+  font-size: 3vw;
+  color: rgb(82, 3, 146);
+  font-style: italic;
+  font-weight: 300;
+}
+.dark #contactanos{
+  color: #CCC;
+}
+#insta{
+display: inline;
+height: 10vh;
+
+}
+
+#insta div{
+  display: inline;
+}
+
+#insta p{
+padding-left: 10vw;
+display: inline;
+font-size: 4vw;
+}
+
+.logo{
+  position: absolute;
+  height: 10vw;
+  width:10vw;
+  
+}
+.instalogo{
+  padding-top: 1.2vw;
+  position: absolute;
+  height: 4vw;
+  width: 4vw;
+}
+.paw{
+  position: absolute;
+  height: 6vw;
+  width:6vw;
+  opacity: 0.01;
+  z-index: 5;
+}
+.paw:hover{
+  position: absolute;
+ opacity: 1;
+ transition: opacity 500ms;
+ }
+ .paw:active{
+  position: absolute;
+ opacity: 1;
+ transition: opacity 500ms;
+ height: 5vw;
+width: 5vw; 
+}
+ 
+.paw2{
+  position: absolute;
+  left: 52.5%;
+  height: 6vw;
+  width:6vw;
+  opacity: 0.01;
+  z-index: 5;
+}
+.paw2:hover{
+  position: absolute;
+ opacity: 1;
+ transition: opacity 500ms;
+ }
+ .paw2:active{
+  position: absolute;
+ opacity: 1;
+ transition: opacity 500ms;
+ height: 5vw;
+width: 5vw; 
+}
+
+ 
+
+
+
 .dark footer {
-  background-color:rgb(28, 28, 28);
+  color:rgb(119, 193, 227);
+  background-color: rgb(16, 26, 32);
 }
 
 @media only screen and (min-width: 970px) {
@@ -467,15 +647,18 @@ footer {
     width: 50%;
   }
 
-  .square {
-    width: 48%;
-    margin: 1%;
-    height: 600px;
-  }
+ 
 }
 
 @media only screen and (max-width: 1300px) {
-  .hero-image {
+  .libros {
     display: none;
+  }
+}
+
+@media (max-width: 767px)
+{
+  .gatos-adopcion li{
+    width: 80%;
   }
 }
